@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
+@each $tema, $color, $contraste in $temas{
+    .modal-#{$tema} {
+        @include modal($color, $contraste);
+
+        .pie-modal{
+            a{
+                @include btn-modal($tema);
+                margin-left: 1rem;
+            }
+
+            button{
+                @include btn-modal($tema);
+                margin-left: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+button.acordeon,
+.acordeon {
+    width: 100%;
+
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+
+    box-shadow: none !important;
+
+    outline: none;
+    //text-align: left;
+    transition: background-color 0.2s linear;
+
+    background-image: url(../images/icons/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px auto;
+
+    &.abierto {
+        border-radius: 0.5rem 0.5rem 0 0;
+
+        background-image: url(../images/icons/chevron-up-solid.svg);
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 16px auto;
+
+        transition: background-color 0.2s linear;
+    }
+}
+
+.contenido-acordeon {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+}

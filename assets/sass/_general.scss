@@ -1,0 +1,198 @@
+@import 'variables';
+@import 'mixins';
+
+:root {
+
+    @each $nombre,
+    $color,
+    $contraste in $temas {
+        --color-#{$nombre}: #{$color};
+        --contraste-#{$nombre}: #{$contraste};
+    }
+
+    @each $gradiente,
+    $numero in $principal {
+        --principal-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $secundario {
+        --secundario-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $alerta {
+        --alerta-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $completado {
+        --completado-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $advertencia {
+        --advertencia-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $claro {
+        --claro-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $oscuro {
+        --oscuro-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $cafe {
+        --cafe-#{$numero}: #{$gradiente};
+    }
+
+    @each $gradiente,
+    $numero in $momo {
+        --momo-#{$numero}: #{$gradiente};
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    //margin-left: -40px !important;
+    margin: 0 0 0 -40px !important;
+}
+
+li {
+    list-style: none;
+}
+
+@for $tamano from 10 through 30 {
+    .f-#{$tamano} {
+        @include tamano-fuente($tamano);
+    }
+}
+
+@for $n from 1 through 6 {
+    h#{$n} {
+        @include titulos($n);
+        margin: 0;
+        font-weight: 300;
+    }
+}
+
+.sin-sombra {
+    box-shadow: none !important;
+}
+
+$displays: flex,
+grid,
+block,
+inline,
+inline-block,
+inline-flex,
+none;
+
+@each $display in $displays {
+    .d-#{$display} {
+        display: $display !important;
+    }
+}
+
+$positions: static,
+relative,
+absolute,
+fixed,
+sticky;
+
+@each $position in $positions {
+    .p-#{$position} {
+        position: $position !important;
+        z-index: 1;
+    }
+
+    @if $position==sticky {
+        .p-#{$position} {
+            position: sticky !important;
+            top: 0;
+
+            z-index: 9999;
+        }
+    }
+}
+
+@for $index from 1 through 10 {
+    .zi-#{$index} {
+        z-index: $index * 100 !important;
+    }
+}
+
+.contenedor {
+    @include contenedor(1rem, 0.5rem);
+
+    @media (min-width: $screen-sm-min) {
+        @include contenedor(1rem, 1rem);
+    }
+
+    @media (min-width: $screen-md-min) {
+        @include contenedor(1rem, 1.5rem);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        @include contenedor(1rem, 2rem);
+    }
+
+    @media (min-width: $screen-xl-min) {
+        @include contenedor(1rem, 2.5rem);
+    }
+
+    @media (min-width: $screen-xxl-min) {
+        @include contenedor(1rem, 3rem);
+    }
+}
+
+.contenedor-fluido {
+    @include contenedor(0, 0);
+}
+
+@for $width from 1 through 10 {
+    .w-#{$width}0 {
+        width: $width * 10% !important;
+    }
+}
+
+@for $opacidad from 0 through 10 {
+    .opacidad-#{$opacidad} {
+        opacity: $opacidad / 10 !important;
+    }
+}

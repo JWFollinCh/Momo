@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'mixins';
+
+@for $mp from 0 through 6 {
+    //Margin
+
+    .m-#{$mp} {
+        @include margin(#{$mp}rem !important, #{$mp}rem !important, #{$mp}rem !important, #{$mp}rem !important);
+    }
+
+    .mt-#{$mp} {
+        @include margin(#{$mp}rem !important, 0, 0, 0);
+    }
+
+    .mr-#{$mp} {
+        @include margin(0, #{$mp}rem !important, 0, 0);
+    }
+
+    .mb-#{$mp} {
+        @include margin(0, 0, #{$mp}rem !important, 0);
+    }
+
+    .ml-#{$mp} {
+        @include margin(0, 0, 0, #{$mp}rem !important);
+    }
+
+    .mx-#{$mp} {
+        @include margin(0, #{$mp}rem !important, 0, #{$mp}rem !important);
+    }
+
+    .my-#{$mp} {
+        @include margin(#{$mp}rem !important, 0, #{$mp}rem !important, 0);
+    }
+
+    //Padding
+    .p-#{$mp} {
+        @include padding(#{$mp}rem !important, #{$mp}rem !important, #{$mp}rem !important, #{$mp}rem !important);
+    }
+
+    .pt-#{$mp} {
+        @include padding(#{$mp}rem !important, 0, 0, 0);
+    }
+
+    .pr-#{$mp} {
+        @include padding(0, #{$mp}rem !important, 0, 0);
+    }
+
+    .pb-#{$mp} {
+        @include padding(0, 0, #{$mp}rem !important, 0);
+    }
+
+    .pl-#{$mp} {
+        @include padding(0, 0, 0, #{$mp}rem !important);
+    }
+
+    .px-#{$mp} {
+        @include padding(0, #{$mp}rem !important, 0, #{$mp}rem !important);
+    }
+
+    .py-#{$mp} {
+        @include padding(#{$mp}rem !important, 0, #{$mp}rem !important, 0);
+    }
+}
+
+@for $mpN from 1 through 6 {
+
+    //Margin
+    .mt-n-#{$mpN} {
+        @include marginN(#{$mpN}rem !important, 0, 0, 0);
+    }
+
+    .mr-n-#{$mpN} {
+        @include marginN(0, #{$mpN}rem !important, 0, 0);
+    }
+
+    .mb-n-#{$mpN} {
+        @include marginN(0, 0, #{$mpN}rem !important, 0);
+    }
+
+    .ml-n-#{$mpN} {
+        @include marginN(0, 0, 0, #{$mpN}rem !important);
+    }
+
+    //Padding
+    .pt-n-#{$mpN} {
+        @include marginN(#{$mpN}rem !important, 0, 0, 0);
+    }
+
+    .pr-n-#{$mpN} {
+        @include marginN(0, #{$mpN}rem !important, 0, 0);
+    }
+
+    .pb-n-#{$mpN} {
+        @include marginN(0, 0, #{$mpN}rem !important, 0);
+    }
+
+    .pl-n-#{$mpN} {
+        @include marginN(0, 0, 0, #{$mpN}rem !important);
+    }
+}

@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+//.tabs {}
+
+@each $content in $justify-content {
+    .tab-#{$content} {
+        justify-content: $content;
+    }
+}
+
+@each $tema,
+$color,
+$contraste in $temas {
+
+    .tab-#{$tema} {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            // justify-content: space-between;
+
+            li {
+                cursor: pointer;
+                transition: 0.3s;
+                text-align: center;
+
+                &:hover {
+                    color: $color;
+                    transition: 0.3s;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    //transform: translateX(-20%);
+                    height: 1px;
+                    background-color: $color;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

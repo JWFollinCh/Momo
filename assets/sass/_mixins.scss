@@ -1,0 +1,551 @@
+@import 'variables';
+
+// %img {
+//     width: 100%;
+//     height: auto;
+//     object-fit: cover;
+//     object-position: center;
+// }
+
+@mixin gutters($cols) {
+
+    @if $cols==$cols {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        @if $cols==1 {
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+
+        @else if $cols>1 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:nth-child(even) {
+                padding-right: 0.5rem;
+            }
+
+            &:nth-child(odd) {
+                padding-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@mixin columnas-bp($cols) {
+
+    width: (100% * $cols) / 12;
+    @include gutters($cols);
+}
+
+@mixin offset-bp($offset) {
+
+    //offset = 4
+    //margin-left = ((100% / 4) - 100%) / 2
+    //margin-left = 29%
+
+    margin-left: (((100% / $offset) - 100%) / 2) * -1;
+    @include gutters($offset);
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin paddingN($top, $right, $bottom, $left) {
+    padding-top: -#{$top};
+    padding-right: -#{$right};
+    padding-bottom: -#{$bottom};
+    padding-left: -#{$left};
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin marginN($top, $right, $bottom, $left) {
+    margin-top: -#{$top};
+    margin-right: -#{$right};
+    margin-bottom: -#{$bottom};
+    margin-left: -#{$left};
+}
+
+@mixin color-tema($color-tema) {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: $color;
+            color: $contraste;
+
+            a,
+            a:visited,
+            a:focus,
+            a:link {
+                color: $contraste;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+@mixin btn($color-tema) {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: $color;
+            color: $contraste;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1rem;
+            margin: 0;
+            display: inline-block;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #{$color}AA;
+                color: $contraste;
+                //opacity: 0.8;
+            }
+        }
+    }
+}
+
+@mixin btn-grupos($btn, $tema) {
+    & .btn-#{$tema}:nth-child(#{$btn}) {
+        border-radius: 0;
+        margin-left: -5px;
+        box-shadow: none;
+    }
+
+    @if $btn < 2 {
+        & .btn-#{$tema}:first-child {
+            border-radius: 0.5rem 0 0 0.5rem !important;
+            box-shadow: none;
+        }
+
+        & .btn-#{$tema}:last-child {
+            border-radius: 0 0.5rem 0.5rem 0 !important;
+            box-shadow: none;
+        }
+    }
+}
+
+@mixin blur($color-tema) {
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: #{$color}CC;
+        }
+    }
+}
+
+@mixin nav($direccion, $altura) {
+    width: 100%;
+    //height: $altura;
+    min-height: $altura;
+
+    display: flex;
+    justify-content: $direccion;
+    align-items: center;
+
+    img,
+    .logo,
+    .marca {
+        width: auto;
+        height: $altura - 10px;
+        max-height: 50px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    img,
+    .logo,
+    .marca {
+        @if $direccion==flex-end {
+            position: absolute;
+            left: 1rem;
+
+            @media (min-width: $screen-sm-min) {
+                left: 2rem;
+            }
+
+            @media (min-width: $screen-md-min) {
+                left: 3rem;
+            }
+
+            @media (min-width: $screen-lg-min) {
+                left: 4rem;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                left: 5rem;
+            }
+
+            @media (min-width: $screen-xxl-min) {
+                left: 6rem;
+            }
+        }
+
+        @else if $direccion==flex-start {
+            position: absolute;
+            right: 1rem;
+
+            @media (min-width: $screen-sm-min) {
+                right: 2rem;
+            }
+
+            @media (min-width: $screen-md-min) {
+                right: 3rem;
+            }
+
+            @media (min-width: $screen-lg-min) {
+                right: 4rem;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                right: 5rem;
+            }
+
+            @media (min-width: $screen-xxl-min) {
+                right: 6rem;
+            }
+        }
+
+        @else if $direccion==center {
+            position: relative;
+        }
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+
+            @if $direccion==flex-end {
+                padding-left: 1rem;
+            }
+
+            @else if $direccion==flex-start {
+                padding-right: 1rem;
+
+            }
+
+            @else if $direccion==center {
+                padding: 0 1rem;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                @if $direccion==flex-end {
+                    padding-left: 1rem;
+                }
+
+                @else if $direccion==flex-start {
+                    padding-right: 1rem;
+
+                }
+
+                @else if $direccion==center {
+                    padding: 0 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@mixin tarjeta($bgcolor: #e4e4e4, $color: $color-oscuro, $border: #e4e4e4, $border-width: 0) {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+
+    padding: 2em;
+    border-radius: 0.5rem;
+    border: solid #{$border-width} #{$border};
+
+    @if($border-width==3px) {
+        box-shadow: none;
+    }
+
+    @else {
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    background-color: $bgcolor;
+    background-image: $bgcolor;
+
+    @if($bgcolor==#FFF) {
+        color: var(--oscuro-10);
+    }
+
+    @else {
+        color: $color;
+    }
+
+
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.5rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 0 1rem 0;
+        border-radius: 0.5rem;
+    }
+
+    a,
+    a:visited,
+    a:focus,
+    a:link {
+        text-decoration: none;
+        color: $color;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .pie-tarjeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+        width: 100%;
+        height: auto;
+
+        padding: 1rem 2rem;
+
+        bottom: 0;
+        left: 0;
+
+        font-size: 0.9rem;
+
+        @if($bgcolor==#FFF) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        @else {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        a,
+        a:visited,
+        a:focus,
+        a:link {
+            text-decoration: none;
+
+            @if($bgcolor==#FFF) {
+                color: var(--oscuro-10);
+            }
+
+            @else {
+                color: $color;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@mixin contenedor($top-bottom, $padding) {
+    width: 100%;
+    padding: $top-bottom $padding;
+}
+
+@mixin titulos($tamano) {
+    font-size: 3rem / $tamano;
+
+    @media (min-width: $screen-md-min) {
+        font-size: 4rem / $tamano;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 5rem / $tamano;
+    }
+}
+
+@mixin modal($color, $contraste) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contenido-modal {
+        width: 50%;
+        height: auto;
+        min-height: 50px;
+
+        padding: 1rem;
+
+        background-color: $color;
+        color: $contraste;
+
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        .cerrar-modal {
+            cursor: pointer;
+
+            &::before {
+                content: "x";
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+
+                color: $contraste;
+
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            margin: 0 0 1rem 0;
+            border-radius: 0.5rem;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $contraste;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .pie-modal {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        width: 50%;
+        height: auto;
+        min-height: 50px;
+
+        padding: 0.5rem 1rem;
+
+        border-top: 1px solid #{$contraste}22;
+
+        font-size: 0.9rem;
+
+        background-color: $color;
+    }
+}
+
+@mixin btn-modal($color-tema) {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: $contraste;
+            color: $color;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1rem;
+            margin: 0;
+            display: inline-block;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $contraste;
+                color: $color;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@mixin border($b) {
+    border-radius: $b;
+}
+
+@mixin tamano-fuente ($tamano) {
+    font-size: #{$tamano}px !important;
+}
