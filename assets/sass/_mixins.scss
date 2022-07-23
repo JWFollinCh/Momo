@@ -180,8 +180,7 @@
 
     img,
     .logo,
-    .marca,
-    i {
+    .marca {
         width: auto;
         height: $altura - 10px;
         max-height: 50px;
@@ -254,6 +253,8 @@
     nav {
         a {
             text-decoration: none;
+
+            padding-left: 1rem;
 
             @if $direccion==flex-end {
                 padding-left: 1rem;

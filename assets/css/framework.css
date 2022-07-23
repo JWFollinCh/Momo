@@ -13350,14 +13350,14 @@ header nav {
 }
 .nav img,
 .nav .logo,
-.nav .marca,
-.nav i {
+.nav .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
 }
 .nav nav a {
   text-decoration: none;
+  padding-left: 1rem;
 }
 .nav nav ul {
   display: flex;
@@ -13380,8 +13380,7 @@ header nav {
 }
 .nav-left img,
 .nav-left .logo,
-.nav-left .marca,
-.nav-left i {
+.nav-left .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
@@ -13465,6 +13464,7 @@ header nav {
 }
 .nav-left nav a {
   text-decoration: none;
+  padding-left: 1rem;
   padding-right: 1rem;
 }
 .nav-left nav ul {
@@ -13502,14 +13502,14 @@ header nav {
 }
 .nav img,
 .nav .logo,
-.nav .marca,
-.nav i {
+.nav .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
 }
 .nav nav a {
   text-decoration: none;
+  padding-left: 1rem;
 }
 .nav nav ul {
   display: flex;
@@ -13532,8 +13532,7 @@ header nav {
 }
 .nav-right img,
 .nav-right .logo,
-.nav-right .marca,
-.nav-right i {
+.nav-right .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
@@ -13618,6 +13617,7 @@ header nav {
 .nav-right nav a {
   text-decoration: none;
   padding-left: 1rem;
+  padding-left: 1rem;
 }
 .nav-right nav ul {
   display: flex;
@@ -13654,14 +13654,14 @@ header nav {
 }
 .nav img,
 .nav .logo,
-.nav .marca,
-.nav i {
+.nav .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
 }
 .nav nav a {
   text-decoration: none;
+  padding-left: 1rem;
 }
 .nav nav ul {
   display: flex;
@@ -13684,8 +13684,7 @@ header nav {
 }
 .nav-center img,
 .nav-center .logo,
-.nav-center .marca,
-.nav-center i {
+.nav-center .marca {
   width: auto;
   height: 40px;
   max-height: 50px;
@@ -13703,6 +13702,7 @@ header nav {
 }
 .nav-center nav a {
   text-decoration: none;
+  padding-left: 1rem;
   padding: 0 1rem;
 }
 .nav-center nav ul {
