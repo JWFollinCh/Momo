@@ -193,6 +193,6 @@ sticky;
 
 @for $opacidad from 0 through 10 {
     .opacidad-#{$opacidad} {
-        opacity: $opacidad / 10 !important;
+        opacity: calc($opacidad / 10) !important;
     }
 }

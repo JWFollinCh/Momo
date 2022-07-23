@@ -79,8 +79,8 @@ $gradiente in $temas {
             .tarjeta,
             .tarjeta-#{$tema}-gradiente {
 
-                margin-top: #{($margin / 2)}rem;
-                margin-bottom: #{($margin / 2)}rem;
+                margin-top: #{(calc($margin / 2))}rem;
+                margin-bottom: #{(calc($margin / 2))}rem;
 
                 &:first-child {
                     margin-left: 0 !important;
@@ -92,8 +92,8 @@ $gradiente in $temas {
 
                 @for $tarjetas from 1 through 12 {
                     &:nth-child(#{$tarjetas}) {
-                        margin-left: #{($margin / 2)}rem !important;
-                        margin-right: #{($margin / 2)}rem !important;
+                        margin-left: #{(calc($margin / 2))}rem !important;
+                        margin-right: #{(calc($margin / 2))}rem !important;
                     }
                 }
 

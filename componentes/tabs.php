@@ -1,4 +1,4 @@
-<?php include '../header.php'?>
+<?php include '../header.php' ?>
 
 <main class="contenedor py-6">
     <h1 class="texto-centrado mb-1">Tabs</h1>
@@ -40,7 +40,7 @@
                     </div>
                     <div id="tab3" class="hidden">
                         <div class="tarjeta-principal">
-                            <h4>Terce primer tab</h4>
+                            <h4>Tercer tab</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quidem et voluptatem
                                 provident ad consectetur fugit numquam delectus quas, dolorem mollitia voluptates cumque
                                 quaerat laborum minus sint iure sequi necessitatibus?</p>
@@ -48,7 +48,7 @@
                     </div>
                     <div id="tab4" class="hidden">
                         <div class="tarjeta-principal">
-                            <h4>Cuarto segundo tab</h4>
+                            <h4>Cuarto tab</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quidem et voluptatem
                                 provident ad consectetur fugit numquam delectus quas, dolorem mollitia voluptates cumque
                                 quaerat laborum minus sint iure sequi necessitatibus?</p>

@@ -44,7 +44,7 @@
 
 @mixin columnas-bp($cols) {
 
-    width: (100% * $cols) / 12;
+    width: calc((100% * $cols) / 12);
     @include gutters($cols);
 }
 
@@ -54,7 +54,7 @@
     //margin-left = ((100% / 4) - 100%) / 2
     //margin-left = 29%
 
-    margin-left: (((100% / $offset) - 100%) / 2) * -1;
+    margin-left: calc((((100% / $offset) - 100%) / 2) * -1);
     @include gutters($offset);
 }
 
@@ -180,7 +180,8 @@
 
     img,
     .logo,
-    .marca {
+    .marca,
+    i {
         width: auto;
         height: $altura - 10px;
         max-height: 50px;
@@ -405,14 +406,14 @@
 }
 
 @mixin titulos($tamano) {
-    font-size: 3rem / $tamano;
+    font-size: calc(3rem / $tamano);
 
     @media (min-width: $screen-md-min) {
-        font-size: 4rem / $tamano;
+        font-size: calc(4rem / $tamano);
     }
 
     @media (min-width: $screen-lg-min) {
-        font-size: 5rem / $tamano;
+        font-size: calc(5rem / $tamano);
     }
 }
 
