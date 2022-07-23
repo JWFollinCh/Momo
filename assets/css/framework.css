@@ -1,4 +1,6 @@
+/* Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+/* General */
 :root {
   --color-principal: #00a8ff;
   --contraste-principal: #f5f5f5;
@@ -604,6 +606,7 @@ h6 {
   opacity: 1 !important;
 }
 
+/* Temas */
 .texto-principal {
   color: #00a8ff;
 }
@@ -1728,6 +1731,7 @@ h6 {
   border-radius: 0.5rem;
 }
 
+/* Columnas */
 .space-between {
   justify-content: space-between;
 }
@@ -4356,6 +4360,7 @@ h6 {
   padding: 0 !important;
 }
 
+/* Tarjetas */
 .tarjeta {
   width: 100%;
   height: auto;
@@ -11987,6 +11992,7 @@ h6 {
   }
 }
 
+/* Modal */
 .modal-principal {
   position: fixed;
   top: 0;
@@ -13058,6 +13064,7 @@ h6 {
   opacity: 0.8;
 }
 
+/* Nav */
 header nav {
   position: relative;
 }
@@ -15027,6 +15034,7 @@ header nav {
   transition: 0.2s;
 }
 
+/* Tabs */
 .tab-space-between {
   justify-content: space-between;
 }
@@ -15249,6 +15257,7 @@ header nav {
   margin-top: 5px;
 }
 
+/* Formularios */
 form {
   display: flex;
   flex-wrap: nowrap;
@@ -15303,6 +15312,7 @@ form input[type=range] {
   background-repeat: no-repeat;
 }
 
+/* Acordeon */
 button.acordeon,
 .acordeon {
   width: 100%;
@@ -15341,6 +15351,7 @@ button.acordeon.abierto,
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
+/* Bordes */
 .br {
   border-radius: 0.5rem;
 }
@@ -15373,6 +15384,7 @@ button.acordeon.abierto,
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
+/* Margen y Relleno */
 .m-0 {
   margin-top: 0rem !important;
   margin-right: 0rem !important;
@@ -16393,4 +16405,401 @@ button.acordeon.abierto,
   margin-right: -0;
   margin-bottom: -0;
   margin-left: -6rem !important;
+}
+
+/* Banner */
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-advertencia, .banner-completado, .banner-alerta, .banner-secundario, .banner-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-advertencia img, .banner-completado img, .banner-alerta img, .banner-secundario img, .banner-principal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-advertencia .titulo, .banner-completado .titulo, .banner-alerta .titulo, .banner-secundario .titulo, .banner-principal .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-advertencia .parrafo, .banner-completado .parrafo, .banner-alerta .parrafo, .banner-secundario .parrafo, .banner-principal .parrafo {
+  margin-top: 20px;
+}
+
+.banner-principal {
+  position: relative;
+}
+.banner-principal .titulo,
+.banner-principal .subtitulo,
+.banner-principal .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-principal::after {
+  content: "";
+  background-color: #00a8ff55;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-advertencia, .banner-completado, .banner-alerta, .banner-secundario, .banner-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-advertencia img, .banner-completado img, .banner-alerta img, .banner-secundario img, .banner-principal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-advertencia .titulo, .banner-completado .titulo, .banner-alerta .titulo, .banner-secundario .titulo, .banner-principal .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-advertencia .parrafo, .banner-completado .parrafo, .banner-alerta .parrafo, .banner-secundario .parrafo, .banner-principal .parrafo {
+  margin-top: 20px;
+}
+
+.banner-secundario {
+  position: relative;
+}
+.banner-secundario .titulo,
+.banner-secundario .subtitulo,
+.banner-secundario .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-secundario::after {
+  content: "";
+  background-color: #00f8cc55;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-advertencia, .banner-completado, .banner-alerta, .banner-principal, .banner-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-advertencia img, .banner-completado img, .banner-alerta img, .banner-principal img, .banner-secundario img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-advertencia .titulo, .banner-completado .titulo, .banner-alerta .titulo, .banner-principal .titulo, .banner-secundario .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-advertencia .parrafo, .banner-completado .parrafo, .banner-alerta .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo {
+  margin-top: 20px;
+}
+
+.banner-alerta {
+  position: relative;
+}
+.banner-alerta .titulo,
+.banner-alerta .subtitulo,
+.banner-alerta .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-alerta::after {
+  content: "";
+  background-color: #d10d1055;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-advertencia, .banner-completado, .banner-principal, .banner-secundario, .banner-alerta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-advertencia img, .banner-completado img, .banner-principal img, .banner-secundario img, .banner-alerta img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-advertencia .titulo, .banner-completado .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-advertencia .parrafo, .banner-completado .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo {
+  margin-top: 20px;
+}
+
+.banner-completado {
+  position: relative;
+}
+.banner-completado .titulo,
+.banner-completado .subtitulo,
+.banner-completado .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-completado::after {
+  content: "";
+  background-color: #00ec0055;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-advertencia, .banner-principal, .banner-secundario, .banner-alerta, .banner-completado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-advertencia img, .banner-principal img, .banner-secundario img, .banner-alerta img, .banner-completado img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-advertencia .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo, .banner-completado .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-advertencia .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo, .banner-completado .parrafo {
+  margin-top: 20px;
+}
+
+.banner-advertencia {
+  position: relative;
+}
+.banner-advertencia .titulo,
+.banner-advertencia .subtitulo,
+.banner-advertencia .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #000000;
+}
+
+.banner-advertencia::after {
+  content: "";
+  background-color: #ffc00055;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-claro, .banner-principal, .banner-secundario, .banner-alerta, .banner-completado, .banner-advertencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-claro img, .banner-principal img, .banner-secundario img, .banner-alerta img, .banner-completado img, .banner-advertencia img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-claro .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo, .banner-completado .titulo, .banner-advertencia .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-claro .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo, .banner-completado .parrafo, .banner-advertencia .parrafo {
+  margin-top: 20px;
+}
+
+.banner-claro {
+  position: relative;
+}
+.banner-claro .titulo,
+.banner-claro .subtitulo,
+.banner-claro .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #000000;
+}
+
+.banner-claro::after {
+  content: "";
+  background-color: #f5f5f555;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-oscuro, .banner-principal, .banner-secundario, .banner-alerta, .banner-completado, .banner-advertencia, .banner-claro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-oscuro img, .banner-principal img, .banner-secundario img, .banner-alerta img, .banner-completado img, .banner-advertencia img, .banner-claro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-oscuro .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo, .banner-completado .titulo, .banner-advertencia .titulo, .banner-claro .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-oscuro .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo, .banner-completado .parrafo, .banner-advertencia .parrafo, .banner-claro .parrafo {
+  margin-top: 20px;
+}
+
+.banner-oscuro {
+  position: relative;
+}
+.banner-oscuro .titulo,
+.banner-oscuro .subtitulo,
+.banner-oscuro .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-oscuro::after {
+  content: "";
+  background-color: #00000055;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-cafe, .banner-principal, .banner-secundario, .banner-alerta, .banner-completado, .banner-advertencia, .banner-claro, .banner-oscuro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-cafe img, .banner-principal img, .banner-secundario img, .banner-alerta img, .banner-completado img, .banner-advertencia img, .banner-claro img, .banner-oscuro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-cafe .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo, .banner-completado .titulo, .banner-advertencia .titulo, .banner-claro .titulo, .banner-oscuro .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-cafe .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo, .banner-completado .parrafo, .banner-advertencia .parrafo, .banner-claro .parrafo, .banner-oscuro .parrafo {
+  margin-top: 20px;
+}
+
+.banner-cafe {
+  position: relative;
+}
+.banner-cafe .titulo,
+.banner-cafe .subtitulo,
+.banner-cafe .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-cafe::after {
+  content: "";
+  background-color: #4e260055;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner, .banner-momo, .banner-principal, .banner-secundario, .banner-alerta, .banner-completado, .banner-advertencia, .banner-claro, .banner-oscuro, .banner-cafe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+.banner img, .banner-momo img, .banner-principal img, .banner-secundario img, .banner-alerta img, .banner-completado img, .banner-advertencia img, .banner-claro img, .banner-oscuro img, .banner-cafe img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner .titulo, .banner-momo .titulo, .banner-principal .titulo, .banner-secundario .titulo, .banner-alerta .titulo, .banner-completado .titulo, .banner-advertencia .titulo, .banner-claro .titulo, .banner-oscuro .titulo, .banner-cafe .titulo {
+  margin-top: -200px;
+}
+.banner .parrafo, .banner-momo .parrafo, .banner-principal .parrafo, .banner-secundario .parrafo, .banner-alerta .parrafo, .banner-completado .parrafo, .banner-advertencia .parrafo, .banner-claro .parrafo, .banner-oscuro .parrafo, .banner-cafe .parrafo {
+  margin-top: 20px;
+}
+
+.banner-momo {
+  position: relative;
+}
+.banner-momo .titulo,
+.banner-momo .subtitulo,
+.banner-momo .parrafo {
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+  z-index: 2;
+  color: #FFF;
+}
+
+.banner-momo::after {
+  content: "";
+  background-color: #53514955;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }/*# sourceMappingURL=framework.css.map */
