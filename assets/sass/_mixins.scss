@@ -184,6 +184,7 @@
         width: auto;
         height: $altura - 10px;
         max-height: 50px;
+        font-size: 200% !important;
     }
 
     h1,
@@ -559,7 +560,15 @@
         align-items: center;
 
         width: 100%;
-        height: 500px;
+        height: 100vh;
+
+        @media(min-width: $screen-sm-min) {
+            height: 100vh;
+        }
+
+        @media(min-width: $screen-lg-min) {
+            height: 70vh;
+        }
 
         img {
             width: 100%;
@@ -599,16 +608,42 @@
                 color: #FFF;
             }
         }
-    }
 
-    .banner-#{$tema}::after {
-        content: "";
-        background-color: #{$color}55;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
+        &::after {
+            content: "";
+            background-color: #{$color}55;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
     }
 }
+
+// @mixin aside ($tema, $color, $contraste, $gradiente) {
+
+//     // ARREGLAR TODO ESTO
+
+//     .aside {
+//         display: flex;
+//         flex-direction: column;
+//         margin: 0;
+//         padding: 2rem !important;
+
+//         width: 100%;
+//         // position: absolute;
+//         height: 100%;
+//         max-height: 100%;
+//     }
+
+
+
+//     .aside-#{$tema} {
+//         @extend .aside;
+
+//         background-color: $color;
+//         color: $contraste;
+//     }
+// }

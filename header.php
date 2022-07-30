@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momo</title>
 
+    <script src="https://kit.fontawesome.com/d1b5388e0f.js" crossorigin="anonymous"></script>
 
     <link href="<?php echo ROOT_URL ?>assets/css/framework.css" rel="stylesheet">
     <link href="<?php echo ROOT_URL ?>assets/css/custom.css" rel="stylesheet">
@@ -19,10 +20,12 @@
     <header class="nav-left expandir-lg tema-momo blur-momo p-sticky contenedor">
         <button class="dropdown"></button>
 
-        <h3><a href="<?php echo ROOT_URL ?>index.php">Momo</a></h3>
+        <a class="logo" href="<?php echo ROOT_URL ?>index.php"><i class="fa-solid fa-cat"></i></a>
 
 
         <nav class="drop contenedor">
             <?php require 'menu.php' ?>
+            <hr class="w-100">
+            <?php include 'menu-lateral.php' ?>
         </nav>
     </header>

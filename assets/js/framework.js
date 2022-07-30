@@ -106,3 +106,8 @@ acordeonBtns.forEach((acordeon) => {
         }
     };
 });
+
+// ASIDE
+
+// var aside = document.querySelector('.aside');
+// var asideParent = aside.parentNode;

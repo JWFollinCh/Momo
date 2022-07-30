@@ -11,7 +11,7 @@
     </div>
     <div class="fila">
         <div class="col-12 texto-centrado">
-            Momo 2022. Todos los derechos reservados © -- <a href="hormiguero">Hormiguero</a>
+            Momo 2022. Todos los derechos reservados © JWFollinCh
         </div>
     </div>
 </footer>

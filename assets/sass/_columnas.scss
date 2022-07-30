@@ -12,6 +12,8 @@
     flex-wrap: wrap;
     width: 100%;
 
+    // padding: 0;
+
     .col {
         flex: 1 0 0%;
         @include gutters(12);

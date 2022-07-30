@@ -67,6 +67,11 @@
 @for $mpN from 1 through 6 {
 
     //Margin
+
+    .m-n-#{$mpN} {
+        @include marginN(#{$mpN}rem !important, #{$mpN}rem !important, #{$mpN}rem !important, #{$mpN}rem !important);
+    }
+
     .mt-n-#{$mpN} {
         @include marginN(#{$mpN}rem !important, 0, 0, 0);
     }
@@ -84,19 +89,24 @@
     }
 
     //Padding
+
+    .p-n-#{$mpN} {
+        @include paddingN(#{$mpN}rem !important, #{$mpN}rem !important, #{$mpN}rem !important, #{$mpN}rem !important);
+    }
+
     .pt-n-#{$mpN} {
-        @include marginN(#{$mpN}rem !important, 0, 0, 0);
+        @include paddingN(#{$mpN}rem !important, 0, 0, 0);
     }
 
     .pr-n-#{$mpN} {
-        @include marginN(0, #{$mpN}rem !important, 0, 0);
+        @include paddingN(0, #{$mpN}rem !important, 0, 0);
     }
 
     .pb-n-#{$mpN} {
-        @include marginN(0, 0, #{$mpN}rem !important, 0);
+        @include paddingN(0, 0, #{$mpN}rem !important, 0);
     }
 
     .pl-n-#{$mpN} {
-        @include marginN(0, 0, 0, #{$mpN}rem !important);
+        @include paddingN(0, 0, 0, #{$mpN}rem !important);
     }
 }
