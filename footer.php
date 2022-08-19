@@ -16,7 +16,7 @@
     </div>
 </footer>
 
-<script src="<?php echo ROOT_URL ?>assets/js/framework.js"></script>
+<script src="<?php echo ROOT_URL ?>assets/js/momo.js"></script>
 </body>
 
 </html>

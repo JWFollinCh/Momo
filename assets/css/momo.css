@@ -624,16 +624,10 @@ h6 {
   background-color: #00a8ff;
   color: #f5f5f5;
 }
-.tema-principal a,
-.tema-principal a:visited,
-.tema-principal a:focus,
-.tema-principal a:link {
+.tema-principal a:hover, .tema-principal a:focus, .tema-principal a:active {
   color: #f5f5f5;
 }
-.tema-principal a:hover,
-.tema-principal a:visited:hover,
-.tema-principal a:focus:hover,
-.tema-principal a:link:hover {
+.tema-principal:hover {
   opacity: 0.8;
 }
 
@@ -748,16 +742,10 @@ h6 {
   background-color: #00f8cc;
   color: #000000;
 }
-.tema-secundario a,
-.tema-secundario a:visited,
-.tema-secundario a:focus,
-.tema-secundario a:link {
+.tema-secundario a:hover, .tema-secundario a:focus, .tema-secundario a:active {
   color: #000000;
 }
-.tema-secundario a:hover,
-.tema-secundario a:visited:hover,
-.tema-secundario a:focus:hover,
-.tema-secundario a:link:hover {
+.tema-secundario:hover {
   opacity: 0.8;
 }
 
@@ -872,16 +860,10 @@ h6 {
   background-color: #d10d10;
   color: #f5f5f5;
 }
-.tema-alerta a,
-.tema-alerta a:visited,
-.tema-alerta a:focus,
-.tema-alerta a:link {
+.tema-alerta a:hover, .tema-alerta a:focus, .tema-alerta a:active {
   color: #f5f5f5;
 }
-.tema-alerta a:hover,
-.tema-alerta a:visited:hover,
-.tema-alerta a:focus:hover,
-.tema-alerta a:link:hover {
+.tema-alerta:hover {
   opacity: 0.8;
 }
 
@@ -996,16 +978,10 @@ h6 {
   background-color: #00ec00;
   color: #000000;
 }
-.tema-completado a,
-.tema-completado a:visited,
-.tema-completado a:focus,
-.tema-completado a:link {
+.tema-completado a:hover, .tema-completado a:focus, .tema-completado a:active {
   color: #000000;
 }
-.tema-completado a:hover,
-.tema-completado a:visited:hover,
-.tema-completado a:focus:hover,
-.tema-completado a:link:hover {
+.tema-completado:hover {
   opacity: 0.8;
 }
 
@@ -1120,16 +1096,10 @@ h6 {
   background-color: #ffc000;
   color: #000000;
 }
-.tema-advertencia a,
-.tema-advertencia a:visited,
-.tema-advertencia a:focus,
-.tema-advertencia a:link {
+.tema-advertencia a:hover, .tema-advertencia a:focus, .tema-advertencia a:active {
   color: #000000;
 }
-.tema-advertencia a:hover,
-.tema-advertencia a:visited:hover,
-.tema-advertencia a:focus:hover,
-.tema-advertencia a:link:hover {
+.tema-advertencia:hover {
   opacity: 0.8;
 }
 
@@ -1244,16 +1214,10 @@ h6 {
   background-color: #f5f5f5;
   color: #000000;
 }
-.tema-claro a,
-.tema-claro a:visited,
-.tema-claro a:focus,
-.tema-claro a:link {
+.tema-claro a:hover, .tema-claro a:focus, .tema-claro a:active {
   color: #000000;
 }
-.tema-claro a:hover,
-.tema-claro a:visited:hover,
-.tema-claro a:focus:hover,
-.tema-claro a:link:hover {
+.tema-claro:hover {
   opacity: 0.8;
 }
 
@@ -1368,16 +1332,10 @@ h6 {
   background-color: #000000;
   color: #f5f5f5;
 }
-.tema-oscuro a,
-.tema-oscuro a:visited,
-.tema-oscuro a:focus,
-.tema-oscuro a:link {
+.tema-oscuro a:hover, .tema-oscuro a:focus, .tema-oscuro a:active {
   color: #f5f5f5;
 }
-.tema-oscuro a:hover,
-.tema-oscuro a:visited:hover,
-.tema-oscuro a:focus:hover,
-.tema-oscuro a:link:hover {
+.tema-oscuro:hover {
   opacity: 0.8;
 }
 
@@ -1492,16 +1450,10 @@ h6 {
   background-color: #4e2600;
   color: #f5f5f5;
 }
-.tema-cafe a,
-.tema-cafe a:visited,
-.tema-cafe a:focus,
-.tema-cafe a:link {
+.tema-cafe a:hover, .tema-cafe a:focus, .tema-cafe a:active {
   color: #f5f5f5;
 }
-.tema-cafe a:hover,
-.tema-cafe a:visited:hover,
-.tema-cafe a:focus:hover,
-.tema-cafe a:link:hover {
+.tema-cafe:hover {
   opacity: 0.8;
 }
 
@@ -1616,16 +1568,10 @@ h6 {
   background-color: #535149;
   color: #f5f5f5;
 }
-.tema-momo a,
-.tema-momo a:visited,
-.tema-momo a:focus,
-.tema-momo a:link {
+.tema-momo a:hover, .tema-momo a:focus, .tema-momo a:active {
   color: #f5f5f5;
 }
-.tema-momo a:hover,
-.tema-momo a:visited:hover,
-.tema-momo a:focus:hover,
-.tema-momo a:link:hover {
+.tema-momo:hover {
   opacity: 0.8;
 }
 
@@ -16973,4 +16919,4 @@ button.acordeon.abierto,
   top: 0;
   left: 0;
   z-index: 1;
-}/*# sourceMappingURL=framework.css.map */
+}/*# sourceMappingURL=momo.css.map */

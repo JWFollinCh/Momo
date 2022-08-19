@@ -1,0 +1,50 @@
+@mixin gutters($cols) {
+
+    @if $cols==$cols {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        @if $cols==1 {
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+
+        @else if $cols>1 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:nth-child(even) {
+                padding-right: 0.5rem;
+            }
+
+            &:nth-child(odd) {
+                padding-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@mixin columnas-bp($cols) {
+
+    width: calc((100% * $cols) / 12);
+    @include gutters($cols);
+}
+
+@mixin offset-bp($offset) {
+
+    //offset = 4
+    //margin-left = ((100% / 4) - 100%) / 2
+    //margin-left = 29%
+
+    margin-left: calc((((100% / $offset) - 100%) / 2) * -1);
+    @include gutters($offset);
+}

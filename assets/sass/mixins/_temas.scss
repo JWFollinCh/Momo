@@ -1,0 +1,25 @@
+@mixin color-tema($color-tema) {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: $color;
+            color: $contraste;
+
+            a {
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $contraste;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

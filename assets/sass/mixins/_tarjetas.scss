@@ -1,0 +1,105 @@
+@mixin tarjeta($bgcolor: #e4e4e4, $color: $color-oscuro, $border: #e4e4e4, $border-width: 0) {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+
+    padding: 2em;
+    border-radius: 0.5rem;
+    border: solid #{$border-width} #{$border};
+
+    @if($border-width==3px) {
+        box-shadow: none;
+    }
+
+    @else {
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    background-color: $bgcolor;
+    background-image: $bgcolor;
+
+    @if($bgcolor==#FFF) {
+        color: var(--oscuro-10);
+    }
+
+    @else {
+        color: $color;
+    }
+
+
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0.5rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 0 1rem 0;
+        border-radius: 0.5rem;
+    }
+
+    a,
+    a:visited,
+    a:focus,
+    a:link {
+        text-decoration: none;
+        color: $color;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .pie-tarjeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+        width: 100%;
+        height: auto;
+
+        padding: 1rem 2rem;
+
+        bottom: 0;
+        left: 0;
+
+        font-size: 0.9rem;
+
+        @if($bgcolor==#FFF) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        @else {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        a,
+        a:visited,
+        a:focus,
+        a:link {
+            text-decoration: none;
+
+            @if($bgcolor==#FFF) {
+                color: var(--oscuro-10);
+            }
+
+            @else {
+                color: $color;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

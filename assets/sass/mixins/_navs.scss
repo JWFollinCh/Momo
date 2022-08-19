@@ -1,0 +1,137 @@
+@mixin blur($color-tema) {
+
+    @each $tema,
+    $color,
+    $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: #{$color}CC;
+        }
+    }
+}
+
+@mixin nav($direccion, $altura) {
+    width: 100%;
+    //height: $altura;
+    min-height: $altura;
+
+    display: flex;
+    justify-content: $direccion;
+    align-items: center;
+
+    img,
+    .logo,
+    .marca {
+        width: auto;
+        height: $altura - 10px;
+        max-height: 50px;
+        font-size: 200% !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    img,
+    .logo,
+    .marca {
+        @if $direccion==flex-end {
+            position: absolute;
+            left: 1rem;
+
+            @media (min-width: $screen-sm-min) {
+                left: 2rem;
+            }
+
+            @media (min-width: $screen-md-min) {
+                left: 3rem;
+            }
+
+            @media (min-width: $screen-lg-min) {
+                left: 4rem;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                left: 5rem;
+            }
+
+            @media (min-width: $screen-xxl-min) {
+                left: 6rem;
+            }
+        }
+
+        @else if $direccion==flex-start {
+            position: absolute;
+            right: 1rem;
+
+            @media (min-width: $screen-sm-min) {
+                right: 2rem;
+            }
+
+            @media (min-width: $screen-md-min) {
+                right: 3rem;
+            }
+
+            @media (min-width: $screen-lg-min) {
+                right: 4rem;
+            }
+
+            @media (min-width: $screen-xl-min) {
+                right: 5rem;
+            }
+
+            @media (min-width: $screen-xxl-min) {
+                right: 6rem;
+            }
+        }
+
+        @else if $direccion==center {
+            position: relative;
+        }
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+
+            padding-left: 1rem;
+
+            @if $direccion==flex-end {
+                padding-left: 1rem;
+            }
+
+            @else if $direccion==flex-start {
+                padding-right: 1rem;
+
+            }
+
+            @else if $direccion==center {
+                padding: 0 1rem;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                @if $direccion==flex-end {
+                    padding-left: 1rem;
+                }
+
+                @else if $direccion==flex-start {
+                    padding-right: 1rem;
+
+                }
+
+                @else if $direccion==center {
+                    padding: 0 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

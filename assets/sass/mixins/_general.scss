@@ -1,0 +1,16 @@
+@mixin contenedor($top-bottom, $padding) {
+    width: 100%;
+    padding: $top-bottom $padding;
+}
+
+@mixin titulos($tamano) {
+    font-size: calc(3rem / $tamano);
+
+    @media (min-width: $screen-md-min) {
+        font-size: calc(4rem / $tamano);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: calc(5rem / $tamano);
+    }
+}

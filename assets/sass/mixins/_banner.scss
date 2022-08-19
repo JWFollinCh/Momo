@@ -1,0 +1,68 @@
+@mixin banner ($tema, $color, $contraste, $gradiente) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 100vh;
+
+        @media(min-width: $screen-sm-min) {
+            height: 100vh;
+        }
+
+        @media(min-width: $screen-lg-min) {
+            height: 70vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .titulo {
+            margin-top: -200px;
+        }
+
+        .parrafo {
+            margin-top: 20px;
+        }
+    }
+
+    .banner-#{$tema} {
+        @extend .banner;
+        position: relative;
+
+        .titulo,
+        .subtitulo,
+        .parrafo {
+            text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+            z-index: 2;
+
+            @if $tema=="claro" {
+                color: $contraste;
+            }
+
+            @else if $tema=="advertencia" {
+                color: $contraste;
+            }
+
+            @else {
+                color: #FFF;
+            }
+        }
+
+        &::after {
+            content: "";
+            background-color: #{$color}55;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}

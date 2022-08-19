@@ -1,0 +1,3 @@
+@mixin tamano-fuente ($tamano) {
+    font-size: #{$tamano}px !important;
+}
