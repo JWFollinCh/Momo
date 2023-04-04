@@ -359,13 +359,6 @@ $flex in $direcciones {
 @each $tema,
 $color,
 $contraste in $temas {
-    .blur-#{$tema} {
-        .drop {
-            background-color: #{$color}CC;
-            backdrop-filter: blur(20px) saturate(180%) !important;
-        }
-    }
-
     @each $quiebre in $bp {
         .expandir-#{$quiebre} {
             .drop {
@@ -525,6 +518,13 @@ $contraste in $temas {
                     }
                 }
             }
+        }
+    }
+
+    .blur-#{$tema} {
+        .drop {
+            background-color: #{$color}CC;
+            backdrop-filter: blur(20px) saturate(180%) !important;
         }
     }
 }

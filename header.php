@@ -22,7 +22,6 @@
 
         <a class="logo" href="<?php echo ROOT_URL ?>index.php"><i class="fa-solid fa-cat"></i></a>
 
-
         <nav class="drop contenedor">
             <?php require 'menu.php' ?>
             <hr class="w-100">

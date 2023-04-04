@@ -8,17 +8,19 @@
             background-color: $color;
             color: $contraste;
 
-            a {
+            a, a i {
 
-                &:hover,
+                color: $contraste;
+
                 &:focus,
                 &:active {
                     color: $contraste;
                 }
-            }
 
-            &:hover {
-                opacity: 0.8;
+                &:hover {
+                    opacity: 0.8;
+                    color: $contraste;
+                }
             }
         }
     }
