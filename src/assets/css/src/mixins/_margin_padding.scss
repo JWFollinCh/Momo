@@ -1,27 +1,59 @@
-@mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top != null {
+        padding-top: $top;
+    }
+    @if $right != null {
+        padding-right: $right;
+    }
+    @if $bottom != null {
+        padding-bottom: $bottom;
+    }
+    @if $left != null {
+        padding-left: $left;
+    }
 }
 
-@mixin paddingN($top, $right, $bottom, $left) {
-    padding-top: -#{$top};
-    padding-right: -#{$right};
-    padding-bottom: -#{$bottom};
-    padding-left: -#{$left};
+@mixin paddingN($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top != null {
+        padding-top: -#{$top};
+    }
+    @if $right != null {
+        padding-right: -#{$right};
+    }
+    @if $bottom != null {
+        padding-bottom: -#{$bottom};
+    }
+    @if $left != null {
+        padding-left: -#{$left};
+    }
 }
 
-@mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top != null {
+        margin-top: $top;
+    }
+    @if $right != null {
+        margin-right: $right;
+    }
+    @if $bottom != null {
+        margin-bottom: $bottom;
+    }
+    @if $left != null {
+        margin-left: $left;
+    }
 }
 
-@mixin marginN($top, $right, $bottom, $left) {
-    margin-top: -#{$top};
-    margin-right: -#{$right};
-    margin-bottom: -#{$bottom};
-    margin-left: -#{$left};
+@mixin marginN($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top != null {
+        margin-top: -#{$top};
+    }
+    @if $right != null {
+        margin-right: -#{$right};
+    }
+    @if $bottom != null {
+        margin-bottom: -#{$bottom};
+    }
+    @if $left != null {
+        margin-left: -#{$left};
+    }
 }

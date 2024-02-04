@@ -7,7 +7,7 @@
         <h2 class="subtitulo">Este es un subtítulo de ejemplo</h2>
     </section>
 
-    <section class="contenedor">
+    <section class="contenedor py-4">
         <div class="tarjeta-claro">
             <h3>Momo v.a1</h3>
 

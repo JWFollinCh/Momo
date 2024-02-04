@@ -9,27 +9,27 @@
     }
 
     .mt-#{$un} {
-        @include margin($value !important, 0, 0, 0);
+        @include margin($value !important, null, null, null);
     }
 
     .mr-#{$un} {
-        @include margin(0, $value !important, 0, 0);
+        @include margin(null, $value !important, null, null);
     }
 
     .mb-#{$un} {
-        @include margin(0, 0, $value !important, 0);
+        @include margin(null, null, $value !important, null);
     }
 
     .ml-#{$un} {
-        @include margin(0, 0, 0, $value !important);
+        @include margin(null, null, null, $value !important);
     }
 
     .mx-#{$un} {
-        @include margin(0, $value !important, 0, $value !important);
+        @include margin(null, $value !important, null, $value !important);
     }
 
     .my-#{$un} {
-        @include margin($value !important, 0, $value !important, 0);
+        @include margin($value !important, null, $value !important, null);
     }
 
     // padding
@@ -38,26 +38,26 @@
     }
 
     .pt-#{$un} {
-        @include padding($value !important, 0, 0, 0);
+        @include padding($value !important, null, null, null);
     }
 
     .pr-#{$un} {
-        @include padding(0, $value !important, 0, 0);
+        @include padding(null, $value !important, null, null);
     }
 
     .pb-#{$un} {
-        @include padding(0, 0, $value !important, 0);
+        @include padding(null, null, $value !important, null);
     }
 
     .pl-#{$un} {
-        @include padding(0, 0, 0, $value !important);
+        @include padding(null, null, null, $value !important);
     }
 
     .px-#{$un} {
-        @include padding(0, $value !important, 0, $value !important);
+        @include padding(null, $value !important, null, $value !important);
     }
 
     .py-#{$un} {
-        @include padding($value !important, 0, $value !important, 0);
+        @include padding($value !important, null, $value !important, null);
     }
 }
