@@ -2,18 +2,17 @@
     "liveSassCompile.settings.formats": [{
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "assets/css"
+            "savePath": "/src/assets/css"
         },
         {
             "extensionName": ".min.css",
             "format": "compressed",
-            "savePath": "assets/dist/css"
+            "savePath": "/src/assets/dist/css"
         }
     ],
     "liveSassCompile.settings.excludeList": [
-        "**/node_modules/**",
-        ".vscode/**",
-        "hormiguero/**"
+        "/**/node_modules/**",
+        "/.vscode/**",
     ],
     "liveSassCompile.settings.generateMap": true,
     "liveSassCompile.settings.autoprefix": [

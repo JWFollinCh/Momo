@@ -1,0 +1,215 @@
+$unidad: 1rem;
+
+$unidades: (
+    0: $unidad * 0,
+    1: $unidad * 1,
+    2: $unidad * 2,
+    3: $unidad * 3,
+    4: $unidad * 4,
+    5: $unidad * 5,
+    6: $unidad * 6,
+    7: $unidad * 7,
+    8: $unidad * 8,
+    9: $unidad * 9,
+    10: $unidad * 10,
+
+    n1: $unidad * -1,
+    n2: $unidad * -2,
+    n3: $unidad * -3,
+    n4: $unidad * -4,
+    n5: $unidad * -5,
+    n6: $unidad * -6,
+    n7: $unidad * -7,
+    n8: $unidad * -8,
+    n9: $unidad * -9,
+    n10: $unidad * -10,
+);
+
+$color-principal: #00a8ff;
+$color-secundario: #00f8cc;
+$color-alerta: #d10d10;
+$color-completado: #00ec00;
+$color-advertencia: #ffc000;
+$color-claro: #f5f5f5;
+$color-oscuro: #000000;
+$color-cafe: #4e2600;
+$color-momo: #535149;
+
+$gradiente-principal: linear-gradient(-250deg, #00a8ff 40%, #0059ff);
+$gradiente-secundario: linear-gradient(-250deg, #00f8cc 40%, #00d3f8);
+$gradiente-alerta: linear-gradient(-250deg, #d10d10 40%, #d10da7);
+$gradiente-completado: linear-gradient(-250deg, #00ec00 40%, #00ecc5);
+$gradiente-advertencia: linear-gradient(-250deg, #ffc000 40%, #fbff00);
+$gradiente-claro: linear-gradient(-250deg, #f5f5f5 40%, #b6b6b6);
+$gradiente-oscuro: linear-gradient(-250deg, #000000 40%, #4b4b4b);
+$gradiente-cafe: linear-gradient(-250deg, #4e2600 40%, #663d00);
+$gradiente-momo: linear-gradient(-250deg, #535149 40%, #808080);
+
+//@each
+$temas:(principal $color-principal $color-claro $gradiente-principal,
+    secundario $color-secundario $color-oscuro $gradiente-secundario,
+    alerta $color-alerta $color-claro $gradiente-alerta,
+    completado $color-completado $color-oscuro $gradiente-completado,
+    advertencia $color-advertencia $color-oscuro $gradiente-advertencia,
+    claro $color-claro $color-oscuro $gradiente-claro,
+    oscuro $color-oscuro $color-claro $gradiente-oscuro,
+    cafe $color-cafe $color-claro $gradiente-cafe,
+    momo $color-momo $color-claro $gradiente-momo);
+
+$principal:(#{$color-principal}11 1,
+    #{$color-principal}22 2,
+    #{$color-principal}33 3,
+    #{$color-principal}44 4,
+    #{$color-principal}55 5,
+    #{$color-principal}66 6,
+    #{$color-principal}77 7,
+    #{$color-principal}88 8,
+    #{$color-principal}99 9,
+    #{$color-principal}aa 10,
+    #{$color-principal}bb 11,
+    #{$color-principal}cc 12,
+    #{$color-principal}dd 13,
+    #{$color-principal}ee 14,
+    #{$color-principal}ff 15);
+
+$secundario:(#{$color-secundario}11 1,
+    #{$color-secundario}22 2,
+    #{$color-secundario}33 3,
+    #{$color-secundario}44 4,
+    #{$color-secundario}55 5,
+    #{$color-secundario}66 6,
+    #{$color-secundario}77 7,
+    #{$color-secundario}88 8,
+    #{$color-secundario}99 9,
+    #{$color-secundario}aa 10,
+    #{$color-secundario}bb 11,
+    #{$color-secundario}cc 12,
+    #{$color-secundario}dd 13,
+    #{$color-secundario}ee 14,
+    #{$color-secundario}ff 15);
+
+$alerta:(#{$color-alerta}11 1,
+    #{$color-alerta}22 2,
+    #{$color-alerta}33 3,
+    #{$color-alerta}44 4,
+    #{$color-alerta}55 5,
+    #{$color-alerta}66 6,
+    #{$color-alerta}77 7,
+    #{$color-alerta}88 8,
+    #{$color-alerta}99 9,
+    #{$color-alerta}aa 10,
+    #{$color-alerta}bb 11,
+    #{$color-alerta}cc 12,
+    #{$color-alerta}dd 13,
+    #{$color-alerta}ee 14,
+    #{$color-alerta}ff 15);
+
+$completado:(#{$color-completado}11 1,
+    #{$color-completado}22 2,
+    #{$color-completado}33 3,
+    #{$color-completado}44 4,
+    #{$color-completado}55 5,
+    #{$color-completado}66 6,
+    #{$color-completado}77 7,
+    #{$color-completado}88 8,
+    #{$color-completado}99 9,
+    #{$color-completado}aa 10,
+    #{$color-completado}bb 11,
+    #{$color-completado}cc 12,
+    #{$color-completado}dd 13,
+    #{$color-completado}ee 14,
+    #{$color-completado}ff 15);
+
+$advertencia:(#{$color-advertencia}11 1,
+    #{$color-advertencia}22 2,
+    #{$color-advertencia}33 3,
+    #{$color-advertencia}44 4,
+    #{$color-advertencia}55 5,
+    #{$color-advertencia}66 6,
+    #{$color-advertencia}77 7,
+    #{$color-advertencia}88 8,
+    #{$color-advertencia}99 9,
+    #{$color-advertencia}aa 10,
+    #{$color-advertencia}bb 11,
+    #{$color-advertencia}cc 12,
+    #{$color-advertencia}dd 13,
+    #{$color-advertencia}ee 14,
+    #{$color-advertencia}ff 15);
+
+$claro:(#{$color-claro}11 1,
+    #{$color-claro}22 2,
+    #{$color-claro}33 3,
+    #{$color-claro}44 4,
+    #{$color-claro}55 5,
+    #{$color-claro}66 6,
+    #{$color-claro}77 7,
+    #{$color-claro}88 8,
+    #{$color-claro}99 9,
+    #{$color-claro}aa 10,
+    #{$color-claro}bb 11,
+    #{$color-claro}cc 12,
+    #{$color-claro}dd 13,
+    #{$color-claro}ee 14,
+    #{$color-claro}ff 15);
+
+$oscuro:(#{$color-oscuro}11 1,
+    #{$color-oscuro}22 2,
+    #{$color-oscuro}33 3,
+    #{$color-oscuro}44 4,
+    #{$color-oscuro}55 5,
+    #{$color-oscuro}66 6,
+    #{$color-oscuro}77 7,
+    #{$color-oscuro}88 8,
+    #{$color-oscuro}99 9,
+    #{$color-oscuro}aa 10,
+    #{$color-oscuro}bb 11,
+    #{$color-oscuro}cc 12,
+    #{$color-oscuro}dd 13,
+    #{$color-oscuro}ee 14,
+    #{$color-oscuro}ff 15);
+
+$cafe:(#{$color-cafe}11 1,
+    #{$color-cafe}22 2,
+    #{$color-cafe}33 3,
+    #{$color-cafe}44 4,
+    #{$color-cafe}55 5,
+    #{$color-cafe}66 6,
+    #{$color-cafe}77 7,
+    #{$color-cafe}88 8,
+    #{$color-cafe}99 9,
+    #{$color-cafe}aa 10,
+    #{$color-cafe}bb 11,
+    #{$color-cafe}cc 12,
+    #{$color-cafe}dd 13,
+    #{$color-cafe}ee 14,
+    #{$color-cafe}ff 15);
+
+$momo:(#{$color-momo}11 1,
+    #{$color-momo}22 2,
+    #{$color-momo}33 3,
+    #{$color-momo}44 4,
+    #{$color-momo}55 5,
+    #{$color-momo}66 6,
+    #{$color-momo}77 7,
+    #{$color-momo}88 8,
+    #{$color-momo}99 9,
+    #{$color-momo}aa 10,
+    #{$color-momo}bb 11,
+    #{$color-momo}cc 12,
+    #{$color-momo}dd 13,
+    #{$color-momo}ee 14,
+    #{$color-momo}ff 15);
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1400px;
+
+$justify-content:(space-between,
+    space-around,
+    space-evenly,
+    center,
+    start,
+    end,
+);

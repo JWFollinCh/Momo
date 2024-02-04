@@ -1,0 +1,575 @@
+/* Nav */
+
+header {
+    nav {
+        position: relative;
+    }
+}
+
+$bp: sm,
+md,
+lg,
+xl,
+xxl;
+
+@each $quiebre in $bp {
+    .expandir-#{$quiebre} {
+
+        .dropdown {
+            @if $quiebre==sm {
+                @media (min-width: $screen-sm-min) {
+                    display: flex;
+                }
+
+                @media (min-width: $screen-md-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-lg-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: none !important;
+                }
+            }
+
+            @if $quiebre==md {
+                @media (min-width: $screen-md-min) {
+                    display: flex;
+                }
+
+                @media (min-width: $screen-lg-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: none !important;
+                }
+            }
+
+            @if $quiebre==lg {
+                @media (min-width: $screen-lg-min) {
+                    display: flex;
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: none !important;
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: none !important;
+                }
+            }
+
+            @if $quiebre==xl {
+                @media (min-width: $screen-xl-min) {
+                    display: flex;
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: none !important;
+                }
+            }
+
+            @if $quiebre==xxl {
+                @media (min-width: $screen-xxl-min) {
+                    display: flex;
+                }
+            }
+        }
+
+        .drop {
+            display: flex;
+
+            @if $quiebre==sm {
+
+                @media (min-width: $screen-sm-min) {
+                    display: none;
+                }
+
+                @media (min-width: $screen-md-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-lg-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+
+                    ul {
+                        flex-direction: row !important;
+
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent !important;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row;
+
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            @if $quiebre==md {
+                @media (min-width: $screen-md-min) {
+                    display: none;
+                }
+
+                @media (min-width: $screen-lg-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+
+                    ul {
+                        flex-direction: row !important;
+
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent !important;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row;
+
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            @if $quiebre==lg {
+                @media (min-width: $screen-lg-min) {
+                    display: none;
+                }
+
+                @media (min-width: $screen-xl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            @if $quiebre==xl {
+                @media (min-width: $screen-xl-min) {
+                    display: none;
+                }
+
+                @media (min-width: $screen-xxl-min) {
+                    display: flex !important;
+                    position: static !important;
+                    width: auto !important;
+                    background-color: transparent;
+                    transition: 0s !important;
+
+                    padding: 0;
+
+                    ul {
+                        flex-direction: row !important;
+
+                        li {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            @if $quiebre==xxl {
+                @media (min-width: $screen-xxl-min) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+$direcciones: izquierda left flex-start,
+derecha right flex-end,
+centrado center center;
+
+@each $nombre,
+$direccion,
+$flex in $direcciones {
+    .nav {
+        @include nav(null, 50px);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+    }
+
+    .nav-#{$direccion} {
+        @include nav($flex, 50px);
+
+        .drop {
+            display: flex;
+            flex-direction: column;
+            align-items: $flex !important;
+            align-content: $flex !important;
+            text-align: $direccion;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: $flex !important;
+                align-content: $flex !important;
+            }
+        }
+    }
+
+    .texto-#{$nombre} {
+        text-align: $direccion;
+    }
+}
+
+@each $tema,
+$color,
+$contraste in $temas {
+    @each $quiebre in $bp {
+        .expandir-#{$quiebre} {
+            .drop {
+
+                @if $quiebre==sm {
+
+                    @media (min-width: $screen-md-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-lg-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-xl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-xxl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+                }
+
+                @if $quiebre==md {
+                    @media (min-width: $screen-lg-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-xl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-xxl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+                }
+
+                @if $quiebre==lg {
+                    @media (min-width: $screen-xl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+
+                    @media (min-width: $screen-xxl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+                }
+
+                @if $quiebre==xl {
+                    @media (min-width: $screen-xxl-min) {
+                        background-color: transparent !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                    }
+                }
+
+                // @if $quiebre==xxl {
+                //     @media (min-width: $screen-xxl-min) {}
+                // }
+            }
+        }
+    }
+
+    .tema-#{$tema} {
+        //display: flex;
+
+        a:hover {
+            color: #{$contraste}CC !important;
+        }
+
+        .dropdown {
+            cursor: pointer;
+
+            background-color: transparent;
+            color: $contraste !important;
+            text-align: center;
+
+            width: 50px;
+            height: 50px;
+
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            position: relative;
+
+            &:hover {
+                background-color: transparent;
+                color: $contraste !important;
+
+                div {
+                    background-color: $contraste;
+                }
+            }
+
+            div {
+                transition: 0.5s;
+                background-color: $contraste;
+                height: 2px;
+
+                &:nth-child(1) {
+                    width: 75%;
+                }
+
+                &:nth-child(2) {
+                    width: 25%;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .drop {
+            position: absolute;
+            z-index: -1 !important;
+
+            right: 0;
+            //top: 50px;
+            //Ajustarlo por el tamaño de la pantalla
+
+            width: 100%;
+
+            //text-align: center;
+
+            background-color: $color;
+
+            ul {
+                li {
+                    width: 100%;
+                    margin: 5px 0;
+
+                    a {
+                        width: 100%;
+
+                        color: $contraste !important;
+
+                        text-decoration: none;
+                        padding: 10px;
+
+                        &:hover {
+                            color: #{$contraste}AA !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .blur-#{$tema} {
+        .drop {
+            background-color: #{$color}CC;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+
+            &:not(.show){
+                backdrop-filter: blur(0px) saturate(100%) !important;
+                -webkit-backdrop-filter: blur(0px) saturate(100%) !important;
+            }
+        }
+    }
+}
+
+.btnAnimacion {
+    &:hover {
+        transition: 0.5s;
+
+        div {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(7px, 7px);
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg) translate(0, 0);
+                opacity: 0;
+                width: 100%;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+    transition: 0.5s;
+}
+
+.show {
+    display: flex !important;
+    transition: 0.5s;
+}

@@ -1,0 +1,17 @@
+/* Bordes */
+
+$radios: top (0.5rem 0.5rem 0 0),
+right (0 0.5rem 0.5rem 0),
+bottom (0 0 0.5rem 0.5rem),
+left (0 0 0.5rem 0.5rem);
+
+@each $radio,
+$borde in $radios {
+    .br {
+        border-radius: 0.5rem;
+    }
+
+    .br-#{$radio} {
+        @include border($borde);
+    }
+}

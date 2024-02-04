@@ -1,0 +1,8 @@
+/* Aside */
+
+@each $tema,
+$color,
+$contraste,
+$gradiente in $temas {
+    @include aside($tema, $color, $contraste, $gradiente);
+}
