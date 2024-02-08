@@ -1,4 +1,7 @@
-<footer class="contenedor tema-momo">
+    </section>
+</main>
+
+<footer class="contenedor tema-momo clear-both">
     <div class="fila">
         <div class="col-12 col-md-6">
             <nav>
@@ -6,12 +9,12 @@
             </nav>
         </div>
         <div class="col-12 col-md-6">
-            <h1 class="texto-derecha">Momo</h1>
+            <h2 class="texto-derecha">Momo</h2>
         </div>
     </div>
     <div class="fila">
         <div class="col-12 texto-centrado">
-            Momo 2022. Todos los derechos reservados © JWFollinCh
+            Momo 2024. Todos los derechos reservados © JWFollinCh
         </div>
     </div>
 </footer>

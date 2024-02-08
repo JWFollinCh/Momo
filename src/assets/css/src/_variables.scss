@@ -46,7 +46,8 @@ $gradiente-cafe: linear-gradient(-250deg, #4e2600 40%, #663d00);
 $gradiente-momo: linear-gradient(-250deg, #535149 40%, #808080);
 
 //@each
-$temas:(principal $color-principal $color-claro $gradiente-principal,
+$temas:(
+    principal $color-principal $color-claro $gradiente-principal,
     secundario $color-secundario $color-oscuro $gradiente-secundario,
     alerta $color-alerta $color-claro $gradiente-alerta,
     completado $color-completado $color-oscuro $gradiente-completado,
@@ -213,3 +214,14 @@ $justify-content:(space-between,
     start,
     end,
 );
+
+$radios: top (0.5rem 0.5rem 0 0),
+right (0 0.5rem 0.5rem 0),
+bottom (0 0 0.5rem 0.5rem),
+left (0 0 0.5rem 0.5rem);
+
+$bp: sm,
+md,
+lg,
+xl,
+xxl;

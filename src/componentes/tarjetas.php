@@ -1,13 +1,13 @@
-<?php include $_SERVER['DOCUMENT_ROOT']. '/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
-<main class="contenedor">
-    <h1 class="texto-centrado mb-1">Tarjetas</h1>
+<article class="contenedor">
+    <h2 class="texto-centrado mb-1">Tarjetas</h2>
 
-    <section>
+    <div>
         <article class="fila pb-2">
             <div class="col-12 col-lg-6">
                 <div class="tarjeta-momo">
-                    <h1>Momo</h1>
+                    <h2>Momo</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque, quidem
                         exercitationem tenetur similique inventore saepe optio eaque perspiciatis voluptate odio
@@ -22,7 +22,7 @@
 
             <div class="col-12 col-lg-6">
                 <div class="tarjeta-cafe">
-                    <h1>Café</h1>
+                    <h2>Café</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque, quidem
                         exercitationem tenetur similique inventore saepe optio eaque perspiciatis voluptate odio
@@ -233,7 +233,7 @@
             <div class="fila pb-2">
                 <div class="col-12 col-lg-6">
                     <div class="tarjeta-momo-gradiente">
-                        <h1>Momo</h1>
+                        <h2>Momo</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque,
                             quidem
@@ -249,7 +249,7 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="tarjeta-cafe-gradiente">
-                        <h1>Café</h1>
+                        <h2>Café</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque,
                             quidem
@@ -370,7 +370,7 @@
             <div class="fila pb-2">
                 <div class="col-12 col-lg-6">
                     <div class="tarjeta-momo-borde">
-                        <h1>Momo</h1>
+                        <h2>Momo</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque,
                             quidem
@@ -386,7 +386,7 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="tarjeta-cafe-borde">
-                        <h1>Café</h1>
+                        <h2>Café</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto doloremque,
                             quidem
@@ -501,7 +501,8 @@
                 </div>
             </div>
         </article>
-    </section>
-</main>
+    </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT']. '/footer.php'; ?>
+</article>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

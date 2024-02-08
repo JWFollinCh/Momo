@@ -24,7 +24,18 @@
 
         <nav class="drop contenedor">
             <?php require 'menu.php' ?>
-            <hr class="w-100">
-            <?php include 'menu-lateral.php' ?>
         </nav>
     </header>
+
+    <main class="fila float-left">
+        <aside class="col-2 p-2">
+            <h4 class="mb-1">Documentación</h4>
+            <ul>
+                <li>En progreso</li>
+            </ul>
+
+            <h4 class="mt-2 mb-1">Componentes</h4>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/menu-lateral.php' ?>
+        </aside>
+
+    <section class="col-10 p-0 m-0 vh-100 overflow-scroll">

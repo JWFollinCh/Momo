@@ -1,46 +1,69 @@
-@mixin btn($color-tema) {
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+%btn{
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+}
 
-    @each $tema,
-    $color,
-    $contraste in $temas {
+@mixin btn($color-tema) {
+    // box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema, $color, $contraste in $temas {
         @if $color-tema==$tema {
             background-color: $color;
+            border: 1px solid $color;
             color: $contraste;
-            text-decoration: none;
-            text-align: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            border: none;
-            font-size: 1rem;
-            margin: 0;
-            display: inline-block;
-            cursor: pointer;
+            @extend %btn;
 
             &:hover {
                 background-color: #{$color}AA;
                 color: $contraste;
-                //opacity: 0.8;
+            }
+        }
+    }
+}
+
+@mixin btn-outline($color-tema) {
+    // box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+    @each $tema, $color, $contraste in $temas {
+        @if $color-tema==$tema {
+            background-color: #fff;
+            border: 1px solid darken($color, 10%);
+            color: darken($color, 10%);
+            @extend %btn;
+
+            &:hover {
+                background-color: #{$color}AA;
+                color: $contraste;
             }
         }
     }
 }
 
 @mixin btn-grupos($btn, $tema) {
-    & .btn-#{$tema}:nth-child(#{$btn}) {
+    & .btn-#{$tema}:nth-child(#{$btn}),
+    & .btn-#{$tema}-outline:nth-child(#{$btn}) {
         border-radius: 0;
         margin-left: -5px;
         box-shadow: none;
     }
 
     @if $btn < 2 {
-        & .btn-#{$tema}:first-child {
+        & .btn-#{$tema}:first-child,
+        & .btn-#{$tema}-outline:first-child {
             border-radius: 0.5rem 0 0 0.5rem !important;
             box-shadow: none;
             margin-left: 0;
         }
 
-        & .btn-#{$tema}:last-child {
+        & .btn-#{$tema}:last-child,
+        & .btn-#{$tema}-outline:last-child {
             border-radius: 0 0.5rem 0.5rem 0 !important;
             box-shadow: none;
         }

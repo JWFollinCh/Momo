@@ -1,0 +1,24 @@
+@import 'variables';
+
+@each $tema, $color in $temas {
+    .alerta-#{$tema} {
+        border: 1px solid darken($color, 5%);
+        background-color: #{$color}55;
+        color: darken($color, 30%);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+
+        @if($tema == 'claro') {
+            border: 1px solid darken($color, 70%);
+            color: darken($color, 70%);
+        }
+
+        // @if($tema == 'oscuro') {
+        //     background-color: #{$color}55;
+        // }
+
+        // @if($tema == 'momo') {
+        //     background-color: #{$color}55;
+        // }
+    }
+}

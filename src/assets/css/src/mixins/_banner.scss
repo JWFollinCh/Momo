@@ -1,3 +1,5 @@
+/* Banner */
+
 @mixin banner ($tema, $color, $contraste, $gradiente) {
     .banner {
         display: flex;
@@ -65,4 +67,11 @@
             z-index: 1;
         }
     }
+}
+
+@each $tema,
+$color,
+$contraste,
+$gradiente in $temas {
+    @include banner($tema, $color, $contraste, $gradiente);
 }

@@ -1,41 +1,16 @@
-@mixin gutters($cols) {
+/* Columnas */
 
+@mixin gutters($cols) {
     @if $cols==$cols {
         padding-top: 0.5rem;
+        padding-right: 0.5rem;
         padding-bottom: 0.5rem;
-
-        @if $cols==1 {
-            padding-left: 0;
-            padding-right: 0;
-
-        }
-
-        @else if $cols>1 {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-
-            &:nth-child(even) {
-                padding-right: 0.5rem;
-            }
-
-            &:nth-child(odd) {
-                padding-left: 0.5rem;
-            }
-        }
+        padding-left: 0.5rem;
     }
 }
 
 @mixin columnas-bp($cols) {
-
-    width: calc((100% * $cols) / 12);
+    width: calc(((100% * $cols) / 12));
     @include gutters($cols);
 }
 
@@ -47,4 +22,123 @@
 
     margin-left: calc((((100% / $offset) - 100%) / 2) * -1);
     @include gutters($offset);
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 0.5rem);
+    margin-left: -0.5rem;
+
+    .col {
+        flex: 1 0 0%;
+        @include gutters(12);
+    }
+
+    .offset {
+        flex: 1 0 0%;
+        @include gutters(12);
+    }
+
+    @for $columna from 1 through 12 {
+        .col-#{$columna} {
+            @include columnas-bp($columna);
+        }
+    }
+
+    @for $columna from 1 through 12 {
+        @media (min-width: $screen-sm-min) {
+            .col-sm-#{$columna} {
+                @include columnas-bp($columna);
+            }
+        }
+    }
+
+    @for $columna from 1 through 12 {
+        @media (min-width: $screen-md-min) {
+            .col-md-#{$columna} {
+                @include columnas-bp($columna);
+            }
+        }
+    }
+
+    @for $columna from 1 through 12 {
+        @media (min-width: $screen-lg-min) {
+            .col-lg-#{$columna} {
+                @include columnas-bp($columna);
+            }
+        }
+    }
+
+    @for $columna from 1 through 12 {
+        @media (min-width: $screen-xl-min) {
+            .col-xl-#{$columna} {
+                @include columnas-bp($columna);
+            }
+        }
+    }
+
+    @for $columna from 1 through 12 {
+        @media (min-width: $screen-xxl-min) {
+            .col-xxl-#{$columna} {
+                @include columnas-bp($columna);
+            }
+        }
+    }
+
+    @for $offset from 2 through 12 {
+        @media (min-width: $screen-sm-min) {
+            .offset-sm-#{$offset} {
+                @include offset-bp($offset);
+            }
+        }
+    }
+
+    @for $offset from 2 through 12 {
+        @media (min-width: $screen-md-min) {
+            .offset-md-#{$offset} {
+                @include offset-bp($offset);
+            }
+        }
+    }
+
+    @for $offset from 2 through 12 {
+        @media (min-width: $screen-lg-min) {
+            .offset-lg-#{$offset} {
+                @include offset-bp($offset);
+            }
+        }
+    }
+
+    @for $offset from 2 through 12 {
+        @media (min-width: $screen-xl-min) {
+            .offset-xl-#{$offset} {
+                @include offset-bp($offset);
+            }
+        }
+    }
+
+    @for $offset from 2 through 12 {
+        @media (min-width: $screen-xxl-min) {
+            .offset-xxl-#{$offset} {
+                @include offset-bp($offset);
+            }
+        }
+    }
+
+    .no-gutters {
+        padding: 0 !important;
+
+        &:first-child {
+            padding: 0 !important;
+        }
+
+        &:last-child {
+            padding: 0 !important;
+        }
+    }
 }

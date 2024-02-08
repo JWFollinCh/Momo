@@ -1,15 +1,15 @@
-<?php include $_SERVER['DOCUMENT_ROOT']. '/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
-<main class="contenedor">
-    <h1 class="texto-centrado mb-1">Tabs</h1>
+<article class="contenedor">
+    <h2 class="texto-centrado mb-1">Tabs</h2>
 
-    <section>
+    <div>
 
         <h2 class="texto-centrado">Space evenly</h2>
         <article class="tabs tab-principal mt-2 mb-4">
 
             <ul class="tab-space-evenly">
-                <li data-target-tab="tab1">Tab 1</li>
+                <li data-target-tab="tab1" class="active">Tab 1</li>
                 <li data-target-tab="tab2">Tab 2</li>
                 <li data-target-tab="tab3">Tab 3</li>
                 <li data-target-tab="tab4">Tab 4</li>
@@ -55,7 +55,7 @@
         <article class="tabs tab-alerta mt-2 mb-4">
 
             <ul class="tab-space-around">
-                <li data-target-tab="tab5">Tab 5</li>
+                <li data-target-tab="tab5" class="active">Tab 5</li>
                 <li data-target-tab="tab6">Tab 6</li>
                 <li data-target-tab="tab7">Tab 7</li>
                 <li data-target-tab="tab8">Tab 8</li>
@@ -101,7 +101,7 @@
         <article class="tabs tab-advertencia mt-2 mb-4">
 
             <ul class="tab-space-between">
-                <li data-target-tab="tab9">Tab 9</li>
+                <li data-target-tab="tab9" class="active">Tab 9</li>
                 <li data-target-tab="tab10">Tab 10</li>
                 <li data-target-tab="tab11">Tab 11</li>
                 <li data-target-tab="tab12">Tab 12</li>
@@ -142,8 +142,8 @@
                 </div>
             </div>
         </article>
-    </section>
+    </div>
 
-</main>
+</article>
 
-<?php include $_SERVER['DOCUMENT_ROOT']. '/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

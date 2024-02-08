@@ -1,9 +1,10 @@
 /* Acordeon */
 
+@import 'variables';
+
 button.acordeon,
 .acordeon {
     width: 100%;
-
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     text-decoration: none;
     padding: 1rem 1.2rem;
@@ -13,27 +14,47 @@ button.acordeon,
     margin: 0;
     display: inline-block;
     cursor: pointer;
-
     box-shadow: none !important;
-
     outline: none;
-    //text-align: left;
     transition: background-color 0.2s linear;
+    position: relative;
 
-    background-image: url(../../images/icons/chevron-down-solid.svg);
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 16px auto;
+    @each $tema, $color in $temas {
+        &.btn-#{$tema} {
+            background-color: #fff;
+            border: 1px solid $color;
+            color: #000;
+        }
+    }
+
+    &::after{
+        content: '⌃';
+        font-size: 2rem;
+        position: absolute;
+        right: 15px;
+        top: 45%;
+        transform: translateY(-50%) rotate(180deg);
+        margin: 0;
+        padding: 0;
+    }
 
     &.abierto {
         border-radius: 0.5rem 0.5rem 0 0;
-
-        background-image: url(../../images/icons/chevron-up-solid.svg);
-        background-repeat: no-repeat;
-        background-position: right 15px center;
-        background-size: 16px auto;
-
         transition: background-color 0.2s linear;
+        opacity: 0.8;
+
+        &::after{
+            transform: translateY(-50%) rotate(0deg);
+            top: 60%;
+        }
+    }
+
+    @each $tema, $color, $texto in $temas {
+        &.abierto.btn-#{$tema} {
+            background-color: $color;
+            border: 1px solid $color;
+            color: $texto;
+        }
     }
 }
 
