@@ -1,3 +1,16 @@
+/* Bordes */
+
 @mixin border($b) {
     border-radius: $b;
+}
+
+@each $radio,
+$borde in $radios {
+    .br {
+        border-radius: 0.5rem;
+    }
+
+    .br-#{$radio} {
+        @include border($borde);
+    }
 }

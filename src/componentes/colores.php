@@ -1,9 +1,9 @@
-<?php include $_SERVER['DOCUMENT_ROOT']. '/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
-<main class="contenedor">
-    <h1 class="texto-centrado mb-1">Colores</h1>
+<article class="contenedor">
+    <h2 class="texto-centrado mb-1">Colores</h2>
 
-    <section id="colores">
+    <div id="colores">
 
 
         <?php
@@ -11,23 +11,22 @@
         while ($color < count($clases)) {
         ?>
 
-        <article class="mb-1">
-            <h3><?php echo $nombres[$color] ?></h3>
-            <div class="<?php echo $clases[$color] ?>">
-                <?php for ($i = 1; $i <= 15; $i++) {
+            <article class="mb-1">
+                <h3><?php echo $nombres[$color] ?></h3>
+                <div class="<?php echo $clases[$color] ?>">
+                    <?php for ($i = 1; $i <= 15; $i++) {
                         echo '<div></div>';
                     }
                     ?>
-            </div>
-        </article>
+                </div>
+            </article>
 
         <?php
             $color++;
         };
         ?>
 
-    </section>
+    </div>
+</article>
 
-</main>
-
-<?php include $_SERVER['DOCUMENT_ROOT']. '/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

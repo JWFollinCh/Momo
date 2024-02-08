@@ -1,3 +1,5 @@
+/* Modal */
+
 @mixin modal($color, $contraste) {
     position: fixed;
     top: 0;
@@ -119,6 +121,26 @@
                 background-color: $contraste;
                 color: $color;
                 opacity: 0.8;
+            }
+        }
+    }
+}
+
+@each $tema,
+$color,
+$contraste in $temas {
+    .modal-#{$tema} {
+        @include modal($color, $contraste);
+
+        .pie-modal {
+            a {
+                @include btn-modal($tema);
+                margin-left: 1rem;
+            }
+
+            button {
+                @include btn-modal($tema);
+                margin-left: 1rem;
             }
         }
     }

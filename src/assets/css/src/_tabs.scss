@@ -1,7 +1,5 @@
 /* Tabs */
 
-//.tabs {}
-
 @each $content in $justify-content {
     .tab-#{$content} {
         justify-content: $content;
@@ -37,6 +35,20 @@ $contraste in $temas {
                     height: 1px;
                     background-color: $color;
                     margin-top: 5px;
+                }
+
+                &.active {
+                    color: $color;
+                    // font-weight: bold;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        //transform: translateX(-20%);
+                        height: 1px;
+                        background-color: $color;
+                        margin-top: 5px;
+                    }
                 }
             }
         }

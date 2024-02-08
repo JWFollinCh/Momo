@@ -74,7 +74,6 @@ var btnTabs = document.querySelectorAll('.tabs ul li');
 
 btnTabs.forEach(function (botonTab) {
     botonTab.onclick = function () {
-
         //Extraemos la data attribute
         var data = botonTab.getAttribute('data-target-tab');
 
@@ -84,6 +83,12 @@ btnTabs.forEach(function (botonTab) {
         //Cambiamos el contenido
         [...innerTab.parentElement.children].forEach(sib => sib.classList.remove('show'));
         innerTab.classList.toggle('show');
+
+        // Eliminamos la clase 'active' de todos los botones
+        btnTabs.forEach(btn => btn.classList.remove('active'));
+
+        // Agregamos la clase 'active' al botón actual
+        botonTab.classList.add('active');
     }
 });
 
