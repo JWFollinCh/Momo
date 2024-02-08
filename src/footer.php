@@ -14,7 +14,7 @@
     </div>
     <div class="fila">
         <div class="col-12 texto-centrado">
-            Momo 2024. Todos los derechos reservados © JWFollinCh
+            Momo 2024. Todos los derechos reservados © JWFollinCh | <a href="https://github.com/JWFollinCh/momo" target="_blank">Momo en Github</a>
         </div>
     </div>
 </footer>

@@ -27,8 +27,8 @@
         </nav>
     </header>
 
-    <main class="fila float-left">
-        <aside class="col-2 p-2">
+    <main class="fila float-left bg-momo-gradiente ">
+        <aside class="col-12 col-lg-2 p-2 texto-claro">
             <h4 class="mb-1">Documentación</h4>
             <ul>
                 <li>En progreso</li>
@@ -38,4 +38,4 @@
             <?php include $_SERVER['DOCUMENT_ROOT'] . '/menu-lateral.php' ?>
         </aside>
 
-    <section class="col-10 p-0 m-0 vh-100 overflow-scroll">
+    <section class="col-12 col-lg-10 p-0 m-0 vh-100 overflow-scroll bg-claro">
